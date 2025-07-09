@@ -19,9 +19,13 @@ body {
   transition: transform 0.2s ease;
   cursor: pointer;
 }
-.seat i:hover {
+.seat i:not(.fullSeat):hover {
   transform: scale(1.1);
 }
+.seat i.fullSeat {
+  cursor: not-allowed;
+}
+
 .title {
   color: lightgray;
   font-family: Arial, Helvetica, sans-serif;
@@ -109,4 +113,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+/* koltuk renkleri*/
+.fullSeat {
+  color: red;
+}
+.emptySeat {
+  color: lightgray;
+}
+.selectedSeat {
+  color: rgb(8, 228, 199);
 }
